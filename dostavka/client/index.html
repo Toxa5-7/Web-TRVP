@@ -1,0 +1,81 @@
+
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+<ul id="couriers-list" class="tasklist-list"></ul>
+
+
+
+<!-- Кнопка добавления курьера -->
+<button id="add-courier-btn">Добавить курьера</button>
+
+<div id="add-courier-modal" class="modal">
+    <div class="modal-content">
+        <h3>Добавить нового курьера</h3>
+        <label>
+            ФИО:
+            <input type="text" id="courier-full-name" placeholder="Введите ФИО" />
+        </label>
+        <label>
+            ID региона:
+            <input type="number" id="courier-region-id" placeholder="Введите ID региона" />
+        </label>
+        <label>
+            Максимальное количество ячеек:
+            <input type="number" id="courier-max-cells" placeholder="Введите количество ячеек" />
+        </label>
+        <div class="modal-buttons">
+            <button id="save-courier-btn">Сохранить</button>
+            <button id="cancel-btn">Отмена</button>
+        </div>
+    </div>
+</div>
+<!-- Модальное окно для добавления задания -->
+<div id="add-task-modal" class="modal">
+    <div class="modal-content">
+        <h3>Добавить задание</h3>
+        <label for="task-description">Описание задания:</label>
+        <input type="text" id="task-description" placeholder="Введите описание задания">
+
+        <label for="task-cells">Количество ячеек:</label>
+        <input type="number" id="task-cells" placeholder="Введите количество ячеек">
+
+        <label for="task-region-id">ID района:</label>
+        <input type="number" id="task-region-id" placeholder="Введите ID района">
+
+        <label for="task-address">Адрес доставки:</label>
+        <input type="text" id="task-address" placeholder="Введите адрес доставки">
+
+        <button id="save-task-btn">Сохранить</button>
+        <button id="cancel-task-btn">Отмена</button>
+    </div>
+</div>
+<ul class="tasklist__tasks-list">
+    
+</ul>
+<div id="delete-task-modal" class="modal">
+    <div class="modal-content">
+        <h2>Удалить задание</h2>
+        <label for="delete-task-select">Выберите задание:</label>
+        <select id="delete-task-select">
+            <!-- Задания будут динамически добавляться -->
+        </select>
+        <div class="modal-actions">
+            <button id="confirm-delete-task-btn">Удалить</button>
+            <button id="cancel-delete-task-btn">Отмена</button>
+        </div>
+    </div>
+</div>
+<div id="transfer-task-modal" class="modal">
+    <div class="modal-content">
+        <h3>Передать задание</h3>
+        <label for="transfer-task-select">Выберите задание:</label>
+        <select id="transfer-task-select"></select>
+
+        <label for="transfer-courier-select">Выберите нового курьера:</label>
+        <select id="transfer-courier-select"></select>
+
+        <button id="transfer-task-btn">Передать</button>
+        <button id="cancel-transfer-task-btn">Отмена</button>
+    </div>
+</div>
+
